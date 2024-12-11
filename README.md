@@ -1,4 +1,4 @@
-# Huzz Translater
+# Huzz Translator
 
 ## Usage
 * clone `git clone git@github.com:Lyall-A/Huzz-Translater.git`

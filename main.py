@@ -15,7 +15,7 @@ if extras:
 allTranslations = translations + extra_translations
 
 print("===================================")
-print("=         Huzz Translater         =")
+print("=         Huzz Translator         =")
 print("=                                 =")
 print("=    Type into terminal to use    =")
 print("===================================")
