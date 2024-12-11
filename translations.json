@@ -1,26 +1,12 @@
-[
-    {
-        "translate_words": ["girl", "girls", "woman", "womans", "women", "womens", "hoe", "hoes"],
-        "translated": "huzz"
-    },
-    {
-        "translate_words": ["bro", "bros"],
-        "translated": "bruzz"
-    },
-    {
-        "translate_words": ["grandma"],
-        "translated": "grandmuzz"
-    },
-    {
-        "translate_words": ["grandpa"],
-        "translated": "grandpuzz"
-    },
-    {
-        "translate_words": ["mom", "mum", "mommy", "mummy", "mother"],
-        "translated": "muzz"
-    },
-    {
-        "translate_words": ["dad", "daddy", "father"],
-        "translated": "duzz"
-    }
-]
+{
+    "huzz": ["girl", "girls", "woman", "womans", "women", "womens", "hoe", "hoes"],
+    "bruzz": ["bro", "bros"],
+    "grandmuzz": ["grandma"],
+    "grandpuzz": ["grandpa"],
+    "muzz": ["mom", "mum", "mommy", "mummy", "mother"],
+    "duzz": ["dad", "daddy", "father"],
+    "tuzz": ["teacher"],
+    "yuzz": ["yells"],
+    "yunc": ["principal"],
+    "shuzz": ["shut up"]
+}

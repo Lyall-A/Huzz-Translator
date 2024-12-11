@@ -1,10 +1,11 @@
 import json
+import re
 
 # vars
-extras = True
-translations = []
-extra_translations = []
-allTranslations = []
+extras = True # False to disable the extra non-huzz translations
+translations = {}
+extra_translations = {}
+allTranslations = {}
 
 # load translations
 with open("translations.json", "r") as file: translations = json.load(file)
@@ -12,7 +13,7 @@ if extras:
     with open("extra_translations.json", "r") as file: extra_translations = json.load(file)
 
 # all translations
-allTranslations = translations + extra_translations
+allTranslations = {**translations, **extra_translations}
 
 print("===================================")
 print("=         Huzz Translator         =")
@@ -22,44 +23,26 @@ print("===================================")
 print("")
 
 while True:
-    # get input
-    input_text = input("Translate:  ")
-    # no input, return and exit
-    if input_text == "": break
+    input_text = input("Translate:  ") # get input
+    if input_text == "": break # no input, return and exit
 
-    text = [] # output as array
+    output_text = input_text
 
-    # loop each word in input
-    for word in input_text.split(" "):
-        found = None
-
-        # loop through each translation
-        for translation in allTranslations:
-            translate_words = translation["translate_words"]
-            translated = translation["translated"]
-
-            # loop through each word in translation_words array
-            for translate_word in translate_words:
-                if word.lower() == translate_word.lower():
-                    found = True
-                    break
-            
-            # append translated word if found
-            if found:
-                # match, append translated word in either upper case, lower case or original form depending on the case of the input word
-                if word.isupper():
-                    text.append(translated.upper()) # convert translated word to upper
-                elif word.islower():
-                    text.append(translated.lower()) # convert translated word to lower
-                else:
-                    text.append(translated) # original state
-                break
-        if not found:
-            # no match, append input word
-            text.append(word)
-
-    # convert output array to string
-    output_text = " ".join(text)
+    # loop through each translation
+    for translated, translate_words in allTranslations.items():
+        # loop through each word in translation words
+        for translate_word in translate_words:
+            # replace words
+            output_text = re.sub(
+                f"\\b{re.escape(translate_word)}\\b",
+                lambda match:
+                    translated.upper() if match.group(0).isupper() # upper case
+                    else translated.lower() if match.group(0).islower() # lower case
+                    else translated.capitalize() if match.group(0)[0].isupper() # capitalize
+                    else translated, # original
+                output_text,
+                flags=re.IGNORECASE
+            )
 
     # print output
     print("Translated: " + output_text)

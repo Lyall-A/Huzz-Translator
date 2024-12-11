@@ -1,18 +1,8 @@
-[
-    {
-        "translate_words": ["ass"],
-        "translated": "gyat"
-    },
-    {
-        "translate_words": ["pussy"],
-        "translated": "bussy"
-    },
-    {
-        "translate_words": ["this"],
-        "translated": "ts"
-    },
-    {
-        "translate_words": ["gang"],
-        "translated": "gng"
-    }
-]
+{
+    "gyat": ["ass"],
+    "bussy": ["pussy"],
+    "ts": ["this"],
+    "gng": ["gang"],
+    "unc": ["uncle"],
+    "yng": ["young"]
+}
