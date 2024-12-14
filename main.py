@@ -20,7 +20,14 @@ print("=         Huzz Translator         =")
 print("=                                 =")
 print("=    Type into terminal to use    =")
 print("===================================")
-print("")
+print("");
+print("Translations:");
+for translated, translateWords in translations.items(): print(f"{", ".join(translateWords)}: {translated}");
+if extras:
+    print("");
+    print("Extra translations:");
+    for translated, translateWords in extra_translations.items(): print(f"{", ".join(translateWords)}: {translated}");
+print("");
 
 while True:
     input_text = input("Translate:  ") # get input

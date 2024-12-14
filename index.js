@@ -11,6 +11,14 @@ console.log("=                                 =");
 console.log("=    Type into terminal to use    =");
 console.log("===================================");
 console.log("");
+console.log("Translations:");
+for (const [translated, translateWords] of Object.entries(huzz.translations)) console.log(`${translateWords.join(", ")}: ${translated}`);
+if (extras) {
+    console.log("");
+    console.log("Extra translations:");
+    for (const [translated, translateWords] of Object.entries(huzz.extraTranslations)) console.log(`${translateWords.join(", ")}: ${translated}`);
+}
+console.log("");
 
 (function main() {
     // get input

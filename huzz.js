@@ -26,5 +26,7 @@ function translate(inputText, extras = true) {
 }
 
 module.exports = {
-    translate
+    translate,
+    translations,
+    extraTranslations
 }
