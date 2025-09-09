@@ -21,8 +21,8 @@
   "crash out": [ "lose it" ],
   "npc": [ "bot" ],
   "put my fries in the bag": [ "fuck off" ],
-  "67": [ "scp 067" ],
-  "41": [ "40+1 rapper unc" ],
-  "sybau": [ "shut your bitch ass up" ],
-  "ngr": [ "peter bot incident" ]
+  "scp 067": [ "67" ],
+  "40+1 rapper unc": [ "41" ],
+  "shut your bitch ass up": [ "sybau" ],
+  "peter bot incident": [ "ngr" ]
 }
